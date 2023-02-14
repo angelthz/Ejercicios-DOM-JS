@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Ejercicios DOM JS</title>
+</head>
+<body>
+    <header class="header-container">
+        <h1>Ejercicios del DOM</h1>
+    </header>
+    <aside id="aside-menu" class="aside-container">
+        <nav class="aside-elements">
+            <a class="menu-op" href="#ejercicio-1">Ejercicio 1</a>
+            <a class="menu-op" href="#ejercicio-2">Ejercicio 2</a>
+            <a class="menu-op" href="#ejercicio-3">Ejercicio 3</a>
+            <a class="menu-op" href="#ejercicio-4">Ejercicio 4</a>
+            <a class="menu-op" href="#ejercicio-5">Ejercicio 5</a>
+        </nav>
+    </aside>
+    <button id="aside-btn" class="aside-btn hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="top-button" id="top-button">
+        <span class="material-icons md-36 height-800">arrow_upward</span>
+    </div>
+
+    <div class="dark-mode-btn" id="dark-mode-btn">
+        <span class="dark-icon material-icons md-36">dark_mode</span>
+    </div>
+
+    <main class="main-container" data-dark>
+        <section id="ejercicio-1" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 1</h2>
+            <p>En este ejercicio, realizamos un reloj y una alarma.</p>
+            <hr>
+            <div class="ejercicio-container">
+                <div class="clock-container">
+                    <h3>Reloj</h3>
+                    <p id="clock-text" class="clock-active clock-style"></p>
+                    <button id="run-clock" class="clock-btn">Iniciar</button>
+                    <button id="stop-clock" class="clock-btn" disabled>Pausar</button>
+                </div>
+                <div class="alarma-container">
+                    <audio id="alarm-audio" src="assets/calm.mp3"></audio>
+                    <h3>Alarma</h3>
+                    <button id="run-alarm">Iniciar alarma</button>
+                    <button id="stop-alarm" disabled>Detener alarma</button>
+                </div>
+            </div>
+        </section>
+        <section id="ejercicio-2" class="ejercicio-dos">
+            <h2 class="ejercicio-titulo">Ejercicio 2: Eventos del teclado</h2>
+            <div class="board">
+                <div class="ball"></div>
+            </div>
+        </section>
+        <section id="ejercicio-3" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 3</h2>
+            <p>Este ejercicio muestra una cuenta regresiva desde el dia actual a mi siguient cumpleaños.</p>
+            <h2 id="birth-date">ss</h2>
+        </section>
+        <section id="ejercicio-4" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 4</h2>
+        </section>
+        <section id="ejercicio-5" class="section">
+            <h2 class="ejercicio-titulo">Sección 5</h2>
+        </section>
+    </main>
+    <!-- <div id="menu-btn" class="menu-btn fa-2x"><i class="fa-solid fa-bars"></i></div> -->
+    <!-- <script src="/script/burger-menu.js"></script> -->
+    <script src="/script/index-dom.js" type="module"></script>
+</body>
+</html>

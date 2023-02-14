@@ -1,0 +1,299 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+    /* transition: scroll-behavior; */
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+    /* background-color: lightgray; */
+    padding: 5vh;
+    /* border: 1px solid red; */
+}
+section:nth-child(even){
+    /* background-color: lightcyan; */
+}
+
+
+h2{
+    margin: 0;
+    text-align: center;
+}
+
+
+
+.header-container{
+    width: 100%;
+    height: 10vh;
+    background-color: #f7df1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header-container h1{
+    margin: 0;
+    text-align: center;
+}
+
+.aside-container{
+    /* Posicionamiento */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2222225b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(2px);
+}
+
+.aside-elements{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.aside-elements a{
+    display: block;
+    padding: 2rem;
+    width: inherit;
+    font-size: 1.5rem;
+    color: lightgray;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.aside-elements a:hover{
+    font-weight: bold;
+    color: lightcyan;
+    background-color: #2222229a;
+}
+.aside-btn{
+    position: fixed;
+    z-index: 999;
+    right: 1rem;
+    bottom: 1rem;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7df1e;
+    box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.2) ;
+}
+
+.is-active{
+    transform: translate(0);
+}
+
+
+/* .aside-elements{
+    display: block;
+    width: 100%;
+    height: 20%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    font-size: 4vh;
+}
+
+.aside-elements >a:hover{
+    color: aqua;
+    background-color: #d0bd2a31;
+    
+}
+
+.show-aside-menu{
+    transform: translate(0);
+}
+
+.menu-btn{
+    background-color: #f7df1e;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.menu-btn:active{
+    background-color: #d0bc2a;
+}
+.menu-btn:hover{
+    cursor: pointer;
+} */
+
+
+
+/*CLOCK STYLES*/
+.clock-style{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ALARM STYLES*/
+.ejercicio-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.clock-btn:hover{
+    cursor: pointer;
+}
+
+.clock-btn-disable{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/*Ejerccio 2*/
+
+.ejercicio-dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.board{
+    width: 100%;
+    height: 70%;
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball{
+    width: 4rem;
+    height: 4rem;
+    background-color: #f7df1e;
+    border-radius: 50%;
+    /* transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+/*Ejercicio 3*/
+/* Boton para volver hacia arriba */
+.top-button{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 7vh;
+    height: 7vh;
+    background-color: #f7df1e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.2) ;
+}
+.top-button:hover{
+    /* opacity: .8; */
+    cursor: pointer;
+    background-color: #a99812;
+}
+
+.top-button-is-active{
+    transform: translate(0, -4.5rem);
+}
+
+
+/*Ejercicio 5 darkmode css*/
+.dark-mode{
+    background-color: #292a2d;
+    color: #d4d4d4;
+}
+/* .dark-text{
+    color: #292a2d;
+} */
+
+.dark-mode-btn{
+    user-select: none;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+
+    width: 7vh;
+    height: 7vh;
+    background-color: #f7df1e;
+    color: #292a2d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.2);
+    transition: background 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+}
+
+/* .dark-icon, .light-icon{
+    position: absolute;
+}
+
+.icon-visible{ 
+    visibility: hidden;
+} */
+
+.dark-mode-btn:hover{
+    cursor: pointer;
+    background-color: #a99812;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.material-icons.height-800 {font-weight: bold;} 
+
+
+
