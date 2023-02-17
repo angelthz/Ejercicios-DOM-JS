@@ -28,9 +28,9 @@ section{
     padding: 5vh;
     /* border: 1px solid red; */
 }
-section:nth-child(even){
-    /* background-color: lightcyan; */
-}
+/* section:nth-child(even){
+    background-color: lightcyan;
+} */
 
 
 h2{
@@ -297,3 +297,13 @@ h2{
 
 
 
+/* Ejercicio responsive design con javascript */
+.ejercicio-cuatro{
+    height: 120vh;
+}
+.responsible-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
