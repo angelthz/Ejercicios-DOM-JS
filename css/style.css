@@ -27,13 +27,15 @@ section{
     /* background-color: lightgray; */
     padding: 5vh;
     /* border: 1px solid red; */
+    /* text-align: center; */
+
 }
 /* section:nth-child(even){
     background-color: lightcyan;
 } */
 
 
-h2{
+h2, h3, p{
     margin: 0;
     text-align: center;
 }
@@ -59,47 +61,48 @@ h2{
 .aside-container{
     /* Posicionamiento */
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     width: 100%;
-    background-color: #2222225b;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    height: 90vh;
+    background-color: #333333b8;
     transform: translateX(-100%);
     transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px); 
 }
 
 .aside-elements{
-    width: inherit;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 .aside-elements a{
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    width: inherit;
+    margin: 0;
+    width: 100%;
+    height: 5%;
     font-size: 1.5rem;
-    color: lightgray;
+    color: lavender;
     text-decoration: none;
+    text-align: center;
     transition: all 0.5s ease;
+    
 }
 
 .aside-elements a:hover{
     font-weight: bold;
-    color: lightcyan;
-    background-color: #2222229a;
+    color:#333;
+    background-color: #f7de1e6c;
 }
 .aside-btn{
     position: fixed;
-    z-index: 999;
+    /* z-index: 1; */
     right: 1rem;
     bottom: 1rem;
     width: 7vh;
@@ -307,3 +310,73 @@ h2{
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* Ejercicio 9: formularios */
+.form{
+    width: 20%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ejercicio 10: Detectar conexion */
+.connection-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: red; */
+    background-color: #292a2d53;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connection-msg{
+    width: 60vh;
+    height: 30vh;
+    border-radius: 1rem;
+    background-color: lightgray;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.connection-header{
+    width: 100%;
+    height: 40%;
+    border-radius:  1rem 1rem 0 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.conn-on{
+    background-color: #47c9a2;
+}
+
+.conn-off{
+    background-color: #ef513a;
+}
+
+.connection-status{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: re; */
+}
+
+.connection-hide{
+    display: none;
+}
+

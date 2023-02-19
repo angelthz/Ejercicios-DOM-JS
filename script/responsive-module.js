@@ -28,11 +28,11 @@ export function responsiveDesign(elementID, mediaQy, desktopCt, mobileCt){
     
     const responsive = e =>{
         if(e.matches){
-            console.log(desktopCt);
+            // console.log(desktopCt);
             htmlEl.innerHTML = desktopCt;
         }
         else{
-            console.log(mobileCt)
+            // console.log(mobileCt)
             htmlEl.innerHTML = mobileCt;
         }
     }

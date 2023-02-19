@@ -7,6 +7,9 @@ import countdown from "../script/countdownn-module.js";
 import backToTop from "../my-scripts/backToTop-module.js";
 import darkMode from "../my-scripts/darkMode-module.js"
 import { responsiveDesign } from "./responsive-module.js";
+import responsiveTester from "../my-scripts/responsive-tester.js";
+import userDeviceInfo from "./user-agent.js";
+import detectConnection from "../my-scripts/detect-connection.js";
 
 document.addEventListener("DOMContentLoaded", e=>{
     hamburgerMenu(".aside-btn",".aside-container",".menu-op");
@@ -38,6 +41,14 @@ document.addEventListener("DOMContentLoaded", e=>{
         `<a href="https://goo.gl/maps/HrMCpvcAAffh2TwZA" target="_blank">Abrir mapa</a>`
     );
 
+
+    //ejecicio 9
+    responsiveTester("form-tester");
+
+    //ejercicio 10
+    userDeviceInfo("user-agent-info-container");
+
+    
 })
 
 document.addEventListener("keydown", e=>{
@@ -47,5 +58,6 @@ document.addEventListener("keydown", e=>{
 
 
 darkMode(".dark-mode-btn","data-dark", "dark-mode");    
-
+//ejercicio 11
+detectConnection(".connection-container");
 
