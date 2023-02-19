@@ -77,7 +77,7 @@ export default function userDeviceInfo(ele){
     }
 
     //REDIRECCION
-    if(isMobile.android()){
-        window.location.href = "https://www.google.com/";
-    }
-}
+//     if(isMobile.android()){
+//         window.location.href = "https://www.google.com/";
+//     }
+// }
