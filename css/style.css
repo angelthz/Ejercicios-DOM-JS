@@ -102,7 +102,7 @@ h2, h3, p{
 }
 .aside-btn{
     position: fixed;
-    /* z-index: 1; */
+    z-index: 1;
     right: 1rem;
     bottom: 1rem;
     width: 7vh;
@@ -328,6 +328,7 @@ h2, h3, p{
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 999;
     /* background-color: red; */
     background-color: #292a2d53;
     backdrop-filter: blur(5px);
@@ -378,5 +379,10 @@ h2, h3, p{
 
 .connection-hide{
     display: none;
+}
+
+a{
+    display: block;
+    text-align: center;
 }
 

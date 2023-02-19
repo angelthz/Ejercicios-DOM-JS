@@ -2,7 +2,7 @@ export default function detectConnection(htmlEl){
     const d = document;
     const htmlCont = document.querySelector(htmlEl);
     
-    console.log(htmlCont)
+    // console.log(htmlCont)
     
     window.addEventListener("online", e =>{
         console.log("Conectado ",window.navigator.onLine);

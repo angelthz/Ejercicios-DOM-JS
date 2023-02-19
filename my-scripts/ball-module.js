@@ -9,7 +9,7 @@ export function moveBall(e, ball, board) {
   let ballLimits = ballEl.getBoundingClientRect();
   let boardLimits = boardEl.getBoundingClientRect();
 
-  console.log(ballLimits, boardLimits);
+  // console.log(ballLimits, boardLimits);
 
   switch (e.key) {
     case "ArrowUp":

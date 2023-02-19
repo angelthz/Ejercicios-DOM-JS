@@ -10,6 +10,8 @@ import { responsiveDesign } from "./responsive-module.js";
 import responsiveTester from "../my-scripts/responsive-tester.js";
 import userDeviceInfo from "./user-agent.js";
 import detectConnection from "../my-scripts/detect-connection.js";
+import webcamDetection from "../my-scripts/webcam-detection.js";
+import getGeoLocation from "../my-scripts/get-geolocation.js";
 
 document.addEventListener("DOMContentLoaded", e=>{
     hamburgerMenu(".aside-btn",".aside-container",".menu-op");
@@ -47,7 +49,13 @@ document.addEventListener("DOMContentLoaded", e=>{
 
     //ejercicio 10
     userDeviceInfo("user-agent-info-container");
+    
 
+    //ejercicio 12
+    webcamDetection("webcam");
+
+    //ejercicio 13
+    getGeoLocation(".geolocation");
     
 })
 
