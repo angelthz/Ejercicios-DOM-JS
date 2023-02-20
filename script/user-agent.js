@@ -80,4 +80,4 @@ export default function userDeviceInfo(ele){
 //     if(isMobile.android()){
 //         window.location.href = "https://www.google.com/";
 //     }
-// }
+}
