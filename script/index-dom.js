@@ -12,6 +12,8 @@ import userDeviceInfo from "./user-agent.js";
 import detectConnection from "../my-scripts/detect-connection.js";
 import webcamDetection from "../my-scripts/webcam-detection.js";
 import getGeoLocation from "../my-scripts/get-geolocation.js";
+import searhFilter from "../my-scripts/search-filter.js";
+import sorteo from "../my-scripts/get-winner.js";
 
 document.addEventListener("DOMContentLoaded", e=>{
     hamburgerMenu(".aside-btn",".aside-container",".menu-op");
@@ -56,6 +58,12 @@ document.addEventListener("DOMContentLoaded", e=>{
 
     //ejercicio 13
     getGeoLocation(".geolocation");
+
+    //ejercicio 14
+    searhFilter(".card-filter", ".card");
+
+    //ejercicio 15
+    sorteo(".prog-langs li", ".winner-btn");
     
 })
 
@@ -68,4 +76,7 @@ document.addEventListener("keydown", e=>{
 darkMode(".dark-mode-btn","data-dark", "dark-mode");    
 //ejercicio 11
 detectConnection(".connection-container");
+
+
+
 
