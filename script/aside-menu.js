@@ -9,12 +9,14 @@ export default function hamburgerMenu(asideBtn, asideMenu, menuItems){
         //
         if(e.target.matches(asideBtn) || e.target.matches(`${asideBtn} *`)){
             console.log("hello");
-            document.querySelector(asideMenu).classList.toggle("is-active");
+            document.querySelector(".main-container").classList.toggle("main-move");
+            document.querySelector(asideMenu).classList.toggle("side-active");
             document.querySelector(asideBtn).classList.toggle("is-active");
         }
 
         if(e.target.matches(menuItems)){
-            document.querySelector(asideMenu).classList.remove("is-active");
+            document.querySelector(asideMenu).classList.remove("side-active");
+            document.querySelector(".main-container").classList.toggle("main-move");
             document.querySelector(asideBtn).classList.remove("is-active");
         }
     });

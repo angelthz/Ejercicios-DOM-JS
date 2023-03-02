@@ -14,14 +14,14 @@ export default function getGeoLocation(elementSel){
     }
 
     const getInfo = (pos) =>{
-        console.log(pos.coords);
+        /* console.log(pos.coords);
         console.log(`
             Longitud: ${pos.coords.latitude}
             Latitud: ${pos.coords.longitude}
             Altitud: ${pos.coords.altitude}`)
-        console.log(pos.coords.accuracy);
+        console.log(pos.coords.accuracy); */
         // console.log(`${info.coords.latitude}%2C${info.coords.longitude}`)
-        console.log(`https://www.google.com/maps/search/?api=1&query=${pos.coords.latitude}%2C${pos.coords.longitude}`)
+        // console.log(`https://www.google.com/maps/search/?api=1&query=${pos.coords.latitude}%2C${pos.coords.longitude}`)
 
         htmlEl.innerHTML += `
             <p>Latitud: <b>${pos.coords.latitude}</b></p>

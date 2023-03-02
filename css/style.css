@@ -1,3 +1,9 @@
+:root{
+    --js-yellow: #f7df1e;
+    --js-black: #333;
+}
+
+
 html{
     box-sizing: border-box;
     font-size: 16px;
@@ -51,7 +57,7 @@ h2, h3, p{
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 99;
 }
 .header-container h1{
     margin: 0;
@@ -63,21 +69,21 @@ h2, h3, p{
     position: fixed;
     width: 100%;
     height: 90vh;
-    background-color: #333333b8;
+    background-color: #333333e8;
     transform: translateX(-100%);
     transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    backdrop-filter: blur(4px);
-    overflow-x: scroll;
+    /* backdrop-filter: blur(4px); */
+    overflow-y: scroll;
 }
 
 .aside-elements{
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
-    display: flex;
+    /* margin: 0 auto; */
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .aside-elements a{
     /* display: block; */
@@ -91,15 +97,17 @@ h2, h3, p{
     font-size: 1.5rem;
     color: lavender;
     text-decoration: none;
-    text-align: center;
-    transition: all 0.5s ease;
+    color: var(--js-yellow);
+    /* text-align: center; */
+    transition: background-color 0.5s ease, color 0.8s ease;
+    /* transition: color 0.5s ease; */
     
 }
 
 .aside-elements a:hover{
     font-weight: bold;
-    color:#333;
-    background-color: #f7de1e6c;
+    color:var(--js-black);
+    background-color: var(--js-yellow);
 }
 .aside-btn{
     position: fixed;
@@ -117,7 +125,7 @@ h2, h3, p{
     box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
-.is-active{
+.side-active{
     transform: translate(0);
 }
 
@@ -197,8 +205,8 @@ h2, h3, p{
     align-items: center;
 }
 .board{
-    width: 100%;
-    height: 70%;
+    width: 85%;
+    height: 60vh;
     background-color: #333;
     overflow: hidden;
     display: flex;
@@ -237,7 +245,7 @@ h2, h3, p{
 }
 
 .top-button-is-active{
-    transform: translate(0, -4.5rem);
+    transform: translate(0, -5rem);
 }
 
 
@@ -253,8 +261,9 @@ h2, h3, p{
 .dark-mode-btn{
     user-select: none;
     position: fixed;
-    bottom: 1rem;
-    left: 1rem;
+    top: .5rem;
+    right: 1rem;
+    z-index: 999;
 
     width: 7vh;
     height: 7vh;
@@ -313,14 +322,22 @@ h2, h3, p{
 }
 
 /* Ejercicio 9: formularios */
-.form{
-    width: 20%;
-    height: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Responsive tester */
+.form-tester{
+    width: 65%;
+    height: auto;
+    margin: 1% auto;
+    padding: 1%;
 }
+
+.form-tester input{
+    display: block;
+    width: 75%;
+    height: 2.5rem;
+    margin: 2% auto;
+}
+
+
 
 /* Ejercicio 10: Detectar conexion */
 .connection-container{
@@ -392,9 +409,12 @@ a{
 
 .card-filter{
     display: block;
-    margin: 0 auto;
-    margin-top: 2%;
+    margin: 2% auto;
+    width: 30%;
+    height: 2rem;
+    /* margin-top: 2%; */
     /* background-color: red; */
+    outline: none;
 }
 
 .card-container{
@@ -447,4 +467,301 @@ a{
 .winner-btn{
     display: block;
     margin: 1rem auto;
+}
+
+/******************* ejercicio 16 *******************/
+/* responsive slider */
+
+
+/* slides */
+.slider-container{
+    position: relative;
+    border: thin solid black;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slides-container{
+    position: relative;
+    height: 450px;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.active-slide{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* botones */
+.slider-btns-container{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s ease;
+}
+
+.slide-btn-active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-btns-container div{
+    display: block;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #292a2d;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    
+}
+.slider-btns-container div:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+@media  screen and (min-width: 1024px) {
+
+    .aside-container{
+
+        width: 20%;
+        overflow-x: auto;
+    }
+    .aside-elements a{
+        font-size: 1rem;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    /* .aside-elements a,
+    .aside-elements a.active{
+        color: var(--js-black);
+        background-color: var(--js-yellow)
+    } */
+    .aside-elements a:hover{
+        background-color: var(--js-yellow)
+    }
+
+    .side-active{
+        transform: translateX(0);
+    }
+    .main-move{
+        margin-left: 20%;
+    }
+    .aside-btn{
+        position: fixed;
+        top: .5rem;
+        left: 1rem;
+        z-index: 999;
+    }
+
+    .top-button{
+        right: 1rem;
+        bottom: -4rem;
+    }
+}
+
+/* .actives{
+    background-color: lightblue;
+    color:#292a2d;
+} */
+
+a.active{
+    color: var(--js-black);
+    background-color: var(--js-yellow);
+}
+
+/*****************************************/
+/* Ejercicio 18 */
+
+
+.video{
+    max-width: 80%;
+    height: auto;
+    margin: 2% auto;
+    display: block;
+}
+
+
+/*****************************************/
+/* Validacion de formularios */
+/* Ejercicio 19 */
+
+/* legend,
+.contact-form-response{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2% 0;
+} */
+
+/* form{
+    width: 65%;
+    height: auto;
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: .6rem;
+} */
+
+/* label{
+    display: block;
+    margin: 0 0 .4rem 0;
+} */
+
+/* input, 
+textarea{
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0 0 1rem 0;
+    outline: none;
+    border: 3px solid #ccc;
+    transition: border .3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+} */
+
+/* textarea{
+    height: 5rem;
+    resize: none;
+} */
+
+/* input[type="submit"],
+input[type="reset"]{
+    display: inline;
+    width: 50%;
+    border-radius: .3rem;
+} */
+
+.contact-form{
+    /* background-color: #f2f2f2; */
+    width: 65%;
+    height: auto;
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: .6rem;
+}
+
+.contact-form label{
+    display: block;
+    margin: 0 0 .4rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0 0 1rem 0;
+    outline: none;
+    border: 3px solid #ccc;
+    transition: border .3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form textarea{
+    height: 5rem;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border: 3px solid lightskyblue;
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid{
+    border: 3px solid lightgreen;
+}
+
+.contact-form input:invalid,
+.contact-form textarea:invalid{
+    border: 3px solid lightcoral;
+}
+
+.contact-form input[type="submit"],
+.contact-form input[type="reset"]{
+    border: none;
+    border-radius: 5px;
+}
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="reset"]:hover{
+    cursor: pointer;
+}
+
+.send{
+
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-form legend,
+.contact-form-response{
+    /* border: thick solid red; */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2% 0;
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: lightcoral;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
 }

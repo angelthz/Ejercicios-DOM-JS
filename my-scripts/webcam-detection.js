@@ -44,7 +44,7 @@ export default function webcamDetection(videoSel){
         .catch((err)=>{
             //si la promesa no se resuelve se generara un error
             //asi que imprimmos y mostramos el error que haya ocurrido
-            console.log(`Ocurrio el siguiente error: ${err}`);
+            // console.log(`Ocurrio el siguiente error: ${err}`);
             videoEl.insertAdjacentHTML("beforebegin", `<p>Ocurrion el siguiente error: <mark>${err}</mark><p>`);
         });
 

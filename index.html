@@ -19,21 +19,21 @@
     </header>
     <aside id="aside-menu" class="aside-container">
         <nav class="aside-elements">
-            <a class="menu-op" href="#ejercicio-1">Ejercicio 1</a>
-            <a class="menu-op" href="#ejercicio-2">Ejercicio 2</a>
-            <a class="menu-op" href="#ejercicio-3">Ejercicio 3</a>
-            <a class="menu-op" href="#ejercicio-4">Ejercicio 4</a>
-            <a class="menu-op" href="#ejercicio-5">Ejercicio 5</a>
-            <a class="menu-op" href="#ejercicio-6">Ejercicio 6</a>
-            <a class="menu-op" href="#ejercicio-7">Ejercicio 7</a>
-            <a class="menu-op" href="#ejercicio-8">Ejercicio 8</a>
-            <a class="menu-op" href="#ejercicio-9">Ejercicio 9</a>
-            <a class="menu-op" href="#ejercicio-10">Ejercicio 10</a>
+            <a class="menu-op" href="#ejercicio-1">E1: Reloj y Alarma</a>
+            <a class="menu-op" href="#ejercicio-2">E2: Eventos del teclado</a>
+            <a class="menu-op" href="#ejercicio-3">E3: Cuenta regresiva</a>
+            <a class="menu-op" href="#ejercicio-4">E4: Responsive Design con JS</a>
+            <a class="menu-op" href="#ejercicio-5">E5: Responsive Tester</a>
+            <a class="menu-op" href="#ejercicio-6">E6: Deteccion de dispositivos (User agent)</a>
+            <a class="menu-op" href="#ejercicio-7">E7: Deteccion de conexion</a>
+            <a class="menu-op" href="#ejercicio-8">E8: Deteccion de camara</a>
+            <a class="menu-op" href="#ejercicio-9">E9: Deteccion de la ubicacion</a>
+            <a class="menu-op" href="#ejercicio-10">E10: Filtros de busqueda</a>
             
-            <a class="menu-op" href="#ejercicio-11">Ejercicio 11</a>
-            <a class="menu-op" href="#ejercicio-12">Ejercicio 12</a>
-            <a class="menu-op" href="#ejercicio-13">Ejercicio 13</a>
-            <a class="menu-op" href="#ejercicio-14">Ejercicio 14</a>
+            <a class="menu-op" href="#ejercicio-11">E11: Sorteo digital</a>
+            <a class="menu-op" href="#ejercicio-12">E12: Responsive Slider</a>
+            <a class="menu-op" href="#ejercicio-13">E13: Scroll Autoplay Video</a>
+            <a class="menu-op" href="#ejercicio-14">E14: Validacion de formularios</a>
             <a class="menu-op" href="#ejercicio-15">Ejercicio 15</a>
 
         </nav>
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </section>
-        <section id="ejercicio-2" class="ejercicio-dos">
+        <section id="ejercicio-2" class="section ejercicio-dos">
             <h2 class="ejercicio-titulo">Ejercicio 2: Eventos del teclado</h2>
             <div class="board">
                 <div class="ball"></div>
@@ -97,15 +97,11 @@
             <h2 class="ejercicio-titulo">Ejercicio 5</h2>
             <h3>Responsive tester</h3>
             <hr>
-            <form id="form-tester" class="form">
+            <form id="form-tester" class="form-tester">
                     <input type="url" name="direccion" placeholder="url" required>
-                    <br>
-                    <input type="text" name="ancho" placeholder="ancho">
-                    <br>
-                    <input type="text" name="alto" placeholder="alto">
-                    <br>
+                    <input type="text" name="ancho" placeholder="ancho" required>
+                    <input type="text" name="alto" placeholder="alto" required>
                     <input type="submit" value="Probar" class="open-btn" name="probar">
-                    <br>
                     <input type="button" value="Cerrar" class="close-btn" name="cerrar">
             </form>
         </section>
@@ -211,16 +207,100 @@
             <button class="winner-btn">Obtener Ganador</button>
         </section>
 
+        <!-- <section id="ejercicio-12" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 12</h2>
+            <h3>Responsive slider</h3>
+            <hr>
+        </section> -->
+
+        <section id="ejercicio-12" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 12</h2>
+            <h3>Responsive slider</h3>
+            <hr>
+            <div class="slider-container">
+                <div class="slides-container">
+                    <div class="slide active-slide">
+                        <!-- <h3>Slide 1</h3> -->
+                        <img src="https://loremflickr.com/640/480/cats" alt="gatos">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis earum sunt praesentium aspernatur, explicabo amet quidem nostrum iusto molestias voluptate reiciendis in iste adipisci laudantium facilis dolore sapiente ad.</p>
+                    </div>
+                    <div class="slide">
+                        <!-- <h3>Slide 2</h3> -->
+                        <img src="https://loremflickr.com/640/480/flowers" alt="flor">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis earum sunt praesentium aspernatur, explicabo amet quidem nostrum iusto molestias voluptate reiciendis in iste adipisci laudantium facilis dolore sapiente ad.</p>
+                    </div>
+                    <div class="slide">
+                        <!-- <h3>Slide 3</h3> -->
+                        <img src="https://loremflickr.com/640/480/cars" alt="automovil">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis earum sunt praesentium aspernatur, explicabo amet quidem nostrum iusto molestias voluptate reiciendis in iste adipisci laudantium facilis dolore sapiente ad.</p>
+                    </div>
+                    <div class="slide">
+                        <!-- <h3>Slide 4</h3> -->
+                        <img src="https://loremflickr.com/640/480/art" alt="arte">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis earum sunt praesentium aspernatur, explicabo amet quidem nostrum iusto molestias voluptate reiciendis in iste adipisci laudantium facilis dolore sapiente ad.</p>
+                    </div>
+                </div>  
+                <div class="slider-btns-container">
+                    <div class="slider-prev-btn">
+                        <span class="material-icons md-48">navigate_before</span>
+                    </div>
+                    <div class="slider-next-btn">
+                        <span class="material-icons md-48">navigate_next</span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="ejercicio-13" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 13</h2>
+            <h3>Video auto play</h3>
+            <hr>
+            <video src="/assets/video-dos.mp4" class="video" controls loop muted data-autoplay></video>
+            <video src="/assets/video.mp4" class="video" controls loop muted data-autoplay></video>
+        </section>
+
+        <section id="ejercicio-14" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 14</h2>
+            <h3>Validacion de formularios</h3>
+            <hr>
+            <form class="contact-form">
+                <!-- <fieldset> -->
+                <legend>Contancto</legend>
+                <label for="name">Nombre</label>
+                <input type="text" name="nombre" id="name" placeholder="Ingresa tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+                <label for="email">Correo</label>
+                <input type="email" name="correo" id="email" placeholder="correo@dominio.com" title="Email solo acepta un formato valido de correo" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                
+                <label for="subject">Asunto</label>
+                <input type="text" name="asunto" id="subject" placeholder="Asunto" title="El asunto es requerido" required>
+
+                <label for="comments">Comentarios</label>
+                <textarea name="comentarios" id="comments" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no debe superar los 255 caracteres." required></textarea>
+                <div class="send">
+                    <input type="submit" value="Enviar">
+                    <input type="reset">
+                </div>
+                <div class="form-loader none">
+                    <img src="/assets/tail-spin.svg" alt="laoder">
+                </div>
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
+        </section>
+
+
         <div class="connection-container connection-hide">
-            <!-- <div class="connection-msg">
+            <div class="connection-msg">
                 <span class=" connection-header material-icons md-48">wifi</span>
                 <h2 class="connection-status">Conexion perdida</h2>
-            </div> -->
+            </div>
         </div>
           
     </main>
-    <!-- <div id="menu-btn" class="menu-btn fa-2x"><i class="fa-solid fa-bars"></i></div> -->
-    <!-- <script src="/script/burger-menu.js"></script> -->
+
     <script src="script/index-dom.js" type="module"></script>
 </body>
 </html>

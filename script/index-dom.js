@@ -14,6 +14,10 @@ import webcamDetection from "../my-scripts/webcam-detection.js";
 import getGeoLocation from "../my-scripts/get-geolocation.js";
 import searhFilter from "../my-scripts/search-filter.js";
 import sorteo from "../my-scripts/get-winner.js";
+import slider from "../my-scripts/slider.js";
+import scrollSpy from "../my-scripts/scroll-spy.js";
+import autoPlayVideo from "../my-scripts/autoplay-video.js";
+import formValidation from "../my-scripts/form-validation.js";
 
 document.addEventListener("DOMContentLoaded", e=>{
     hamburgerMenu(".aside-btn",".aside-container",".menu-op");
@@ -64,6 +68,18 @@ document.addEventListener("DOMContentLoaded", e=>{
 
     //ejercicio 15
     sorteo(".prog-langs li", ".winner-btn");
+
+    //ejercicio 16
+    slider();
+
+    //ejercicio 17
+    scrollSpy();
+
+    //ejercicio 18
+    autoPlayVideo();
+
+    //ejercicio 19
+    formValidation(".formulario");
     
 })
 

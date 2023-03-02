@@ -24,7 +24,7 @@ export default function responsiveTester(formId){
         if(e.target === formEl){
             e.preventDefault();
             tester = window.open(formEl.direccion.value,"_blank",`width=${formEl.ancho.value},height=${formEl.alto.value}`);
-   
+            
             // window.open("https://github.com/","_blank","width=480,height=840");
             // console.log(formEl.direccion.value, formEl.ancho.value, formEl.alto.value)
 
@@ -32,7 +32,11 @@ export default function responsiveTester(formId){
     })
 
     d.addEventListener("click", e=>{
-        if(e.target === formEl.cerrar)
+        if(e.target === formEl.cerrar){
+            console.log(tester)
             tester.close();
+            console.log("close")
+
+        }
     });
 }
