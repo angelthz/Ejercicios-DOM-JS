@@ -682,7 +682,7 @@ input[type="reset"]{
     display: block;
     width: 100%;
     height: 2.5rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
     outline: none;
     border: 3px solid #ccc;
     transition: border .3s ease;
@@ -705,10 +705,10 @@ input[type="reset"]{
     border: 3px solid lightgreen;
 }
 
-.contact-form input:invalid,
+/* .contact-form input:invalid,
 .contact-form textarea:invalid{
     border: 3px solid lightcoral;
-}
+} */
 
 .contact-form input[type="submit"],
 .contact-form input[type="reset"]{
@@ -739,8 +739,9 @@ input[type="reset"]{
 }
 
 .contact-form-error{
-    margin-top: -1rem;
-    font-size: 80%;
+    display: block;
+    margin-top: -1.5rem;
+    font-size: 1.2rem   ;
     background-color: lightcoral;
     color: #fff;
     transition: all .3s ease-in-out;
@@ -764,4 +765,62 @@ input[type="reset"]{
         visibility: visible;
         opacity: 1;
     }
+}
+
+/* ******************************************** */
+/* Ejercicio 20 */
+/* Narrador de texto */
+
+.reader-form{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.reader-form textarea{
+    display: block;
+    width: 65%;
+    height: 8rem;
+    margin: 1% auto;
+    resize: none;
+    border: 3px solid #ccc;
+    outline: none;
+    transition: border .3s ease;
+    font-family: 'Inter', sans-serif;
+}
+.reader-form label{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.reader-form select{
+    display: block;
+    width: 25%;
+    height: 2rem;
+    margin: 1% auto 2% auto;
+    border: 3px solid #ccc;
+    outline: none;
+}
+
+.reader-form textarea:focus{
+    border: 3px solid lightskyblue;
+}
+
+.reader-form textarea:valid{
+    border: 3px solid lightgreen;
+}
+
+.reader-form input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    height: 2rem;
+    outline: none;
+    border: 3px solid #ccc;
+}
+
+.reader-form input[type="submit"]:hover{
+    cursor: pointer;
 }

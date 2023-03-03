@@ -34,7 +34,7 @@
             <a class="menu-op" href="#ejercicio-12">E12: Responsive Slider</a>
             <a class="menu-op" href="#ejercicio-13">E13: Scroll Autoplay Video</a>
             <a class="menu-op" href="#ejercicio-14">E14: Validacion de formularios</a>
-            <a class="menu-op" href="#ejercicio-15">Ejercicio 15</a>
+            <a class="menu-op" href="#ejercicio-15">E15: Narrador de texto</a>
 
         </nav>
     </aside>
@@ -266,7 +266,7 @@
             <hr>
             <form class="contact-form">
                 <!-- <fieldset> -->
-                <legend>Contancto</legend>
+                <legend>Contacto</legend>
                 <label for="name">Nombre</label>
                 <input type="text" name="nombre" id="name" placeholder="Ingresa tu nombre" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
 
@@ -291,6 +291,19 @@
             </form>
         </section>
 
+        <section id="ejercicio-15" class="section">
+            <h2 class="ejercicio-titulo">Ejercicio 15</h2>
+            <h3>Narrador de texto</h3>
+            <hr>
+            <form class="reader-form">
+                <textarea name="texto" placeholder="Ingresa el texto a leer" required></textarea>
+                <label for="narrador">Elige un narrador</label>
+                <select name="voices" id="narrador" required>
+                    <option value="">Elige una opcion</option>
+                </select>
+                <input type="submit" name="narrar" value="Leer texto">
+            </form>
+        </section>
 
         <div class="connection-container connection-hide">
             <div class="connection-msg">

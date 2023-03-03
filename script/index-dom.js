@@ -17,7 +17,8 @@ import sorteo from "../my-scripts/get-winner.js";
 import slider from "../my-scripts/slider.js";
 import scrollSpy from "../my-scripts/scroll-spy.js";
 import autoPlayVideo from "../my-scripts/autoplay-video.js";
-import formValidation from "../my-scripts/form-validation.js";
+import contactFormValidation from "../my-scripts/form-validation.js";
+import narrator from "../my-scripts/narrador.js";
 
 document.addEventListener("DOMContentLoaded", e=>{
     hamburgerMenu(".aside-btn",".aside-container",".menu-op");
@@ -79,7 +80,10 @@ document.addEventListener("DOMContentLoaded", e=>{
     autoPlayVideo();
 
     //ejercicio 19
-    formValidation(".formulario");
+    contactFormValidation();
+
+    //ejercicio 20
+    narrator();
     
 })
 
